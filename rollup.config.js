@@ -26,6 +26,7 @@ export default {
       css: css => {
         css.write('public/build/bundle.css');
       },
+      emitCss: false,
     }),
 
     // If you have external dependencies installed from
