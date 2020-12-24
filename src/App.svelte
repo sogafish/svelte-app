@@ -9,6 +9,10 @@
     count += 1;
   };
 </script>
+
+<svelte:head>
+</svelte:head>
+
 <div>
 <Header />
   <div class="contents-container">
@@ -22,7 +26,7 @@
 </div>
 
 <style>
-.contents-container {
+  .contents-container {
   padding-top: 50px;
 }
 :global(html, body, div, span, object, iframe,
@@ -119,5 +123,4 @@ q:before, q:after) {
 :global(input, select) {
   vertical-align:middle;
 }
-
 </style>
