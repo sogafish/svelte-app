@@ -2,12 +2,19 @@
   import Header from './components/Header.svelte';
   import Counter from './components/Counter.svelte';
   import Button from './components/Button.svelte';
+  import ListDisplay from './components/ListDisplay.svelte';
+  import { list } from './stores';
 
   let count = 0;
+  let itemText: string;
 
   const incrementCount = () => {
     count += 1;
   };
+
+  const updateList = () => {
+    list.update((n) => n.concat(itemText));
+  }
 </script>
 
 <svelte:head>
@@ -22,6 +29,13 @@
     <Button
       onClick={incrementCount} text='OnClick'
     />
+    <div class="input">
+      <input placeholder="input" bind:value={itemText} /> 
+    </div>
+    <Button
+      onClick={updateList} text='Add'
+    />
+    <ListDisplay />
   </div>
 </div>
 
