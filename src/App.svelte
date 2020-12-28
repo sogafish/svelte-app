@@ -2,6 +2,7 @@
   import Header from './components/Header.svelte';
   import Counter from './components/Counter.svelte';
   import Button from './components/Button.svelte';
+  import InputText from './components/InputText.svelte';
   import ListDisplay from './components/ListDisplay.svelte';
   import { list } from './stores';
 
@@ -29,9 +30,10 @@
     <Button
       onClick={incrementCount} text='OnClick'
     />
-    <div class="input">
-      <input placeholder="input" bind:value={itemText} /> 
-    </div>
+    <InputText
+      placeholder="input"
+      bind:value={itemText}
+    />
     <Button
       onClick={updateList} text='Add'
     />
