@@ -1,11 +1,14 @@
 <script lang="ts">
   import { list } from '../stores';
 
-  let _list;
+  type List = string[]
 
-  const unsubscribe = list.subscribe(value => {
+  let _list: List;
+
+  list.subscribe((value: List) => {
     _list = value;
   });
+
 </script>
 
 <ul class="list-display">
